@@ -18,9 +18,7 @@
  *      double outputs[BATCH_SIZE][OUTPUT_SIZE]
  */ 
 
-#define BATCH_SIZE 1        // # of samples per batch
-#define INPUT_SIZE 10       // # of neurons in input layer
-#define OUTPUT_SIZE 5       // # of neurons in output layer
+#include "dense.h"
 
 void dense_layer(
         double inputs[BATCH_SIZE][INPUT_SIZE], 

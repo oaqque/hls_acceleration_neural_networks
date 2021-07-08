@@ -4,17 +4,16 @@
  */
 
 #include "dense.c"
+#include "dense.h"
 #include <stdio.h>
-
-#define BATCH_SIZE 1
-#define INPUT_SIZE 10
-#define OUTPUT_SIZE 5
 
 void printOutput(double output_layer[BATCH_SIZE][OUTPUT_SIZE]);
 
-int main(void) {
-    // Initialise the variables
-    double inputs[BATCH_SIZE][INPUT_SIZE] = {{0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2}};
+int main(void) { // Initialise the variables
+    double inputs[BATCH_SIZE][INPUT_SIZE] = {
+        {0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2},
+        {0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2},
+    };
     double weights[OUTPUT_SIZE][INPUT_SIZE] = {
         {0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2},
         {0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2},
@@ -32,11 +31,13 @@ int main(void) {
     printOutput(outputs);
 }
 
+// Function for printing the output vector
 void printOutput(double output_layer[BATCH_SIZE][OUTPUT_SIZE]) {
     for (int i = 0; i < BATCH_SIZE; i++) {
+        printf("[");
         for (int j = 0; j < OUTPUT_SIZE; j++) {
             printf("%f ", output_layer[i][j]);
         }
+        printf("]\n");
     }
-    printf("\n");
 }
