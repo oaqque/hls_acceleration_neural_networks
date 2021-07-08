@@ -1,0 +1,8 @@
+#define BATCH_SIZE 1
+#define INPUT_HEIGHT 27
+#define INPUT_WIDTH 27
+#define STRIDE 1
+#define OUTPUT_HEIGHT 25
+#define OUTPUT_WIDTH 25
+#define FILT_HEIGHT 3
+#define FILT_WIDTH 3
