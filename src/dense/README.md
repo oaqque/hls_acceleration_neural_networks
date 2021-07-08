@@ -1,6 +1,6 @@
 ## Usage
 1. Run `make` in terminal to generate the test files
-2. Run `./runTest` to see run generated test
+2. Run `./runTest` to run generated test
 3. Run `make clean` to clean this directory
 
 ## dense.h
