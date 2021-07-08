@@ -6,7 +6,7 @@
 ## dense.h
 Set BATCH_SIZE, INPUT_SIZE and OUTPUT_SIZE in this file
 | Variable | Description |
-| :--- | ---: |
+| :--- | :--- |
 | BATCH_SIZE | # of samples in a batch |
 | INPUT_SIZE | # of neurons in input layer | 
 | OUTPUT_SIZE | # of neurons in output layer |
