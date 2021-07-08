@@ -50,6 +50,7 @@ int main() {
     printOutput(outputs);
 }
 
+// Function for printing the output
 void printOutput(double outputs[BATCH_SIZE][OUTPUT_HEIGHT][OUTPUT_WIDTH]) {
     for (int batch = 0; batch < BATCH_SIZE; batch++) {
         printf("Batch Number: %d\n", batch);
