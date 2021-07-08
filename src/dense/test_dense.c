@@ -4,10 +4,13 @@
  */
 
 #include "dense.c"
+#include <stdio.h>
 
 #define BATCH_SIZE 1
 #define INPUT_SIZE 10
 #define OUTPUT_SIZE 5
+
+void printOutput(double output_layer[BATCH_SIZE][OUTPUT_SIZE]);
 
 int main(void) {
     // Initialise the variables
@@ -19,7 +22,7 @@ int main(void) {
         {0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2},
         {0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2},
     };
-    double bias[OUTPUT_SIZE] = {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5};
+    double bias[OUTPUT_SIZE] = {0.5, 0.5, 0.5, 0.5, 0.5};
     double outputs[BATCH_SIZE][OUTPUT_SIZE];
 
     // Run the variables through our Dense layer
@@ -29,10 +32,11 @@ int main(void) {
     printOutput(outputs);
 }
 
-void printOutput(double arr[BATCH_SIZE][OUTPUT_SIZE]) {
+void printOutput(double output_layer[BATCH_SIZE][OUTPUT_SIZE]) {
     for (int i = 0; i < BATCH_SIZE; i++) {
         for (int j = 0; j < OUTPUT_SIZE; j++) {
-            printf("%f ", arr[i][j]);
+            printf("%f ", output_layer[i][j]);
+        }
     }
     printf("\n");
 }
