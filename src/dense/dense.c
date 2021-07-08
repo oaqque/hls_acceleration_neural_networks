@@ -11,7 +11,7 @@
  *
  * INPUT:
  *      double inputs[BATCH_SIZE][INPUT_SIZE]
- *      double weights[INPUT_SIZE][OUTPUT_SIZE]
+ *      double weights[OUTPUT_SIZE][INPUT_SIZE]
  *      double bias[OUTPUT_SIZE]
  *
  * OUTPUT:
@@ -24,7 +24,7 @@
 
 void dense_layer(
         double inputs[BATCH_SIZE][INPUT_SIZE], 
-        double weights[INPUT_SIZE][OUTPUT_SIZE], 
+        double weights[OUTPUT_SIZE][INPUT_SIZE], 
         double bias[OUTPUT_SIZE], 
         double outputs[BATCH_SIZE][OUTPUT_SIZE])
 {
@@ -39,7 +39,7 @@ void dense_layer(
 
             double neuron_output = 0.0;
             for (j = 0; j < INPUT_SIZE; j++) {
-                neuron_output += inputs[batch][j] * weights[j][i];
+                neuron_output += inputs[batch][j] * weights[i][j];
             }
             outputs[batch][i] = neuron_output + bias[i];
         } 
